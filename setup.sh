@@ -15,3 +15,5 @@ cp .bashrc ~/
 cp -R spell/ ~/.vim/
 
 echo "Now open vim and type :PlugInstall"
+
+echo "install semistandard: npm install semistandard -g"

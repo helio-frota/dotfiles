@@ -1,5 +1,6 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
+
 " Plugins:
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -7,7 +8,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript'
-Plug 'w0rp/ale'
+Plug 'vim-syntastic/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
@@ -28,10 +29,7 @@ set t_Co=256
 syntax on
 set background=dark
 colorscheme PaperColor 
-" This will create a separator for 80 columns
-" and another for 120 (extreme long line)
 let &colorcolumn="80,".join(range(120,120),",")
-" This helps to identify function calls on JS code.
 highlight jsFuncCall ctermfg=cyan
 
 " Configuration for plugins
@@ -41,4 +39,6 @@ set statusline +=\ %{fugitive#statusline()}
 autocmd vimenter * NERDTree
 " Sets the airline theme
 let g:airline_theme='papercolor'
-
+" semistandard configs
+let g:syntastic_javascript_checkers=['standard']
+let g:syntastic_javascript_standard_exec = 'semistandard'
