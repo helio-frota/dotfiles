@@ -12,5 +12,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 cp .vimrc ~/
 cp .bashrc ~/
+cp -R spell/ ~/.vim/
 
 echo "Now open vim and type :PlugInstall"
