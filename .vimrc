@@ -11,6 +11,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'vim-syntastic/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 " General configuration
@@ -31,7 +32,6 @@ set background=dark
 colorscheme PaperColor 
 let &colorcolumn="80,".join(range(120,120),",")
 highlight jsFuncCall ctermfg=cyan
-
 " Configuration for plugins
 " Fugitive statusline
 set statusline +=\ %{fugitive#statusline()}
