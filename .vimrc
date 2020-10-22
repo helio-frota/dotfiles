@@ -30,13 +30,13 @@ set t_Co=256
 syntax on
 set background=dark
 colorscheme PaperColor 
-let &colorcolumn="80,".join(range(120,120),",")
+" let &colorcolumn="80,".join(range(120,120),",")
 highlight jsFuncCall ctermfg=cyan
 " Configuration for plugins
 " Fugitive statusline
 set statusline +=\ %{fugitive#statusline()}
 " Opens NERDTree automatically when vim starts up
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 " Sets the airline theme
 let g:airline_theme='papercolor'
 " semistandard configs
