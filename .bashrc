@@ -1,3 +1,4 @@
-HISTSIZE=
-HISTFILESIZE=
-HISTCONTROL=erasedups
+export HISTSIZE=
+export HISTFILESIZE=
+export HISTCONTROL=ignoreboth:erasedups
+
