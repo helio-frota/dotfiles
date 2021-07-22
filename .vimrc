@@ -23,7 +23,8 @@ set autoindent
 set spell
 set spelllang=en_us
 set t_Co=256
-let &colorcolumn="80,".join(range(120,120),",")
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+let &colorcolumn="72,".join(range(120,999),",")
 " Configuration for plugins
 " Fugitive statusline
 set statusline +=\ %{fugitive#statusline()}
