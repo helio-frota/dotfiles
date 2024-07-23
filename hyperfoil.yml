@@ -1,21 +1,15 @@
-# Based on https://hyperfoil.io/docs/getting-started/quickstart5/
 name: trustify
 http:
   host: http://[::1]:8080
   sharedConnections: 100
 phases:
-- websiteUserRampUp:
+- websiteUser:
     increasingRate:
-      duration: 30s
-      maxIterations: 15
       initialUsersPerSec: 1
       targetUsersPerSec: 16
-      startAfter:
-      - phase: websiteUserSteady
-        iteration: previous
-      - phase: restAPIUserSteady
-        iteration: previous
-      scenario: &websiteUser
+      maxSessions: 16
+      duration: 1m
+      scenario:
       - index:
         - httpRequest:
             GET: /index
@@ -34,29 +28,13 @@ phases:
       - importers:
         - httpRequest:
             GET: /importers
-- websiteUserSteady:
-    constantRate:
-      duration: 30s
-      maxIterations: 16
-      usersPerSec: 1
-      startAfter:
-      - phase: websiteUserRampUp
-        iteration: same
-      - phase: restAPIUserRampUp
-        iteration: same
-      scenario: *websiteUser
-- restAPIUserRampUp:
+- restAPIUser:
     increasingRate:
-      duration: 30s
-      maxIterations: 15
       initialUsersPerSec: 1
       targetUsersPerSec: 16
-      startAfter:
-      - phase: websiteUserSteady
-        iteration: previous
-      - phase: restAPIUserSteady
-        iteration: previous
-      scenario: &restAPIUser
+      maxSessions: 16
+      duration: 1m
+      scenario:
       - get_advisory:
         - httpRequest:
             GET: /api/v1/advisory
@@ -78,14 +56,3 @@ phases:
       - get_vulnerabilities:
         - httpRequest:
             GET: /api/v1/vulnerability
-- restAPIUserSteady:
-    constantRate:
-      duration: 30s
-      maxIterations: 16 
-      usersPerSec: 1
-      startAfter:
-      - phase: websiteUserRampUp
-        iteration: same
-      - phase: restAPIUserRampUp
-        iteration: same
-      scenario: *restAPIUser
