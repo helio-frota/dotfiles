@@ -1,0 +1,104 @@
+# Based on https://hyperfoil.io/docs/getting-started/quickstart5/
+name: trustify
+http:
+  host: http://[::1]:8080
+  sharedConnections: 100
+phases:
+- WebsiteUserRampUp:
+    increasingRate:
+      duration: 30s
+      maxIterations: 16
+      initialUsersPerSec:
+        base: 0
+        increment: 1
+      targetUsersPerSec:
+        base: 1
+        increment: 1
+      startAfter:
+      - phase: WebsiteUserSteady
+        iteration: previous
+      - phase: RestAPIUserSteady
+        iteration: previous
+      scenario: &websiteUser
+      - index:
+        - httpRequest:
+            GET: /index
+      - openapi:
+        - httpRequest:
+            GET: /openapi
+      - sboms:
+        - httpRequest:
+            GET: /sboms
+      - packages:
+        - httpRequest:
+            GET: /packages
+      - advisories:
+        - httpRequest:
+            GET: /advisories
+      - importers:
+        - httpRequest:
+            GET: /importers
+- WebsiteUserSteady:
+    constantRate:
+      duration: 30s
+      maxIterations: 16
+      usersPerSec:
+        base: 0
+        increment: 1
+      startAfter:
+      - phase: WebsiteUserRampUp
+        iteration: same
+      - phase: RestAPIUserRampUp
+        iteration: same
+      scenario: *websiteUser
+
+- RestAPIUserRampUp:
+    increasingRate:
+      duration: 30s
+      maxIterations: 16
+      initialUsersPerSec:
+        base: 0
+        increment: 1
+      targetUsersPerSec:
+        base: 1
+        increment: 1
+      startAfter:
+      - phase: WebsiteUserSteady
+        iteration: previous
+      - phase: RestAPIUserSteady
+        iteration: previous
+      scenario: &restAPIUser
+      - get_advisory:
+        - httpRequest:
+            GET: /api/v1/advisory
+      - get_importer:
+        - httpRequest:
+            GET: /api/v1/importer
+      - get_packages:
+        - httpRequest:
+            GET: /api/v1/purl
+      - search_packages:
+        - httpRequest:
+            GET: /api/v1/purl?q=curl
+      - get_products:
+        - httpRequest:
+            GET: /api/v1/product
+      - get_sboms:
+        - httpRequest:
+            GET: /api/v1/sbom
+      - get_vulnerabilities:
+        - httpRequest:
+            GET: /api/v1/vulnerability
+- RestAPIUserSteady:
+    constantRate:
+      duration: 30s
+      maxIterations: 16
+      usersPerSec:
+        base: 0
+        increment: 1
+      startAfter:
+      - phase: WebsiteUserRampUp
+        iteration: same
+      - phase: RestAPIUserRampUp
+        iteration: same
+      scenario: *restAPIUser
