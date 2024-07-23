@@ -7,13 +7,9 @@ phases:
 - WebsiteUserRampUp:
     increasingRate:
       duration: 30s
-      maxIterations: 8
-      initialUsersPerSec:
-        base: 1
-        increment: 2
-      targetUsersPerSec:
-        base: 1
-        increment: 2
+      maxIterations: 15
+      initialUsersPerSec: 1
+      targetUsersPerSec: 16
       startAfter:
       - phase: WebsiteUserSteady
         iteration: previous
@@ -41,10 +37,8 @@ phases:
 - WebsiteUserSteady:
     constantRate:
       duration: 30s
-      maxIterations: 8
-      usersPerSec:
-        base: 1
-        increment: 2
+      maxIterations: 16
+      usersPerSec: 1
       startAfter:
       - phase: WebsiteUserRampUp
         iteration: same
@@ -55,13 +49,9 @@ phases:
 - RestAPIUserRampUp:
     increasingRate:
       duration: 30s
-      maxIterations: 8
-      initialUsersPerSec:
-        base: 1
-        increment: 2
-      targetUsersPerSec:
-        base: 1
-        increment: 2
+      maxIterations: 15
+      initialUsersPerSec: 1
+      targetUsersPerSec: 16
       startAfter:
       - phase: WebsiteUserSteady
         iteration: previous
@@ -92,10 +82,8 @@ phases:
 - RestAPIUserSteady:
     constantRate:
       duration: 30s
-      maxIterations: 8
-      usersPerSec:
-        base: 1
-        increment: 2
+      maxIterations: 16 
+      usersPerSec: 1
       startAfter:
       - phase: WebsiteUserRampUp
         iteration: same
