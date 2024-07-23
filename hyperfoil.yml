@@ -4,16 +4,16 @@ http:
   host: http://[::1]:8080
   sharedConnections: 100
 phases:
-- WebsiteUserRampUp:
+- websiteUserRampUp:
     increasingRate:
       duration: 30s
       maxIterations: 15
       initialUsersPerSec: 1
       targetUsersPerSec: 16
       startAfter:
-      - phase: WebsiteUserSteady
+      - phase: websiteUserSteady
         iteration: previous
-      - phase: RestAPIUserSteady
+      - phase: restAPIUserSteady
         iteration: previous
       scenario: &websiteUser
       - index:
@@ -34,28 +34,27 @@ phases:
       - importers:
         - httpRequest:
             GET: /importers
-- WebsiteUserSteady:
+- websiteUserSteady:
     constantRate:
       duration: 30s
       maxIterations: 16
       usersPerSec: 1
       startAfter:
-      - phase: WebsiteUserRampUp
+      - phase: websiteUserRampUp
         iteration: same
-      - phase: RestAPIUserRampUp
+      - phase: restAPIUserRampUp
         iteration: same
       scenario: *websiteUser
-
-- RestAPIUserRampUp:
+- restAPIUserRampUp:
     increasingRate:
       duration: 30s
       maxIterations: 15
       initialUsersPerSec: 1
       targetUsersPerSec: 16
       startAfter:
-      - phase: WebsiteUserSteady
+      - phase: websiteUserSteady
         iteration: previous
-      - phase: RestAPIUserSteady
+      - phase: restAPIUserSteady
         iteration: previous
       scenario: &restAPIUser
       - get_advisory:
@@ -79,14 +78,14 @@ phases:
       - get_vulnerabilities:
         - httpRequest:
             GET: /api/v1/vulnerability
-- RestAPIUserSteady:
+- restAPIUserSteady:
     constantRate:
       duration: 30s
       maxIterations: 16 
       usersPerSec: 1
       startAfter:
-      - phase: WebsiteUserRampUp
+      - phase: websiteUserRampUp
         iteration: same
-      - phase: RestAPIUserRampUp
+      - phase: restAPIUserRampUp
         iteration: same
       scenario: *restAPIUser
