@@ -15,5 +15,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+if vim.lsp.inlay_hint then
+    vim.lsp.inlay_hint.enable(true, { 0 })
+end
+
 require('vimopts')
 require('lazy').setup('plugins')
