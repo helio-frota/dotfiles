@@ -9,7 +9,7 @@ phases:
       duration: 30s
       maxIterations: 16
       initialUsersPerSec:
-        base: 0
+        base: 1
         increment: 1
       targetUsersPerSec:
         base: 1
@@ -43,7 +43,7 @@ phases:
       duration: 30s
       maxIterations: 16
       usersPerSec:
-        base: 0
+        base: 1
         increment: 1
       startAfter:
       - phase: WebsiteUserRampUp
@@ -57,7 +57,7 @@ phases:
       duration: 30s
       maxIterations: 16
       initialUsersPerSec:
-        base: 0
+        base: 1
         increment: 1
       targetUsersPerSec:
         base: 1
@@ -94,7 +94,7 @@ phases:
       duration: 30s
       maxIterations: 16
       usersPerSec:
-        base: 0
+        base: 1
         increment: 1
       startAfter:
       - phase: WebsiteUserRampUp
