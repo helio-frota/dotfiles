@@ -96,7 +96,6 @@ exec --no-startup-id picom
 exec --no-startup-id ssh-add
 exec_always --no-startup-id killall polybar
 exec_always --no-startup-id sleep 1 && /home/heliofrota/.config/polybar/fix.sh
-exec_always --no-startup-id /usr/lib64/xfce4/notifyd/xfce4-notifyd
 set $rosewater #f5e0dc
 set $flamingo  #f2cdcd
 set $pink      #f5c2e7
