@@ -1,0 +1,10 @@
+#! /bin/bash
+
+printf "\e[0;36m* fetching upstream\n\e[0;m"
+git fetch upstream
+printf "\e[0;36m* rebasing\n\e[0;m"
+git rebase upstream/main
+printf "\e[0;36m* updating fork\n\e[0;m"
+git push origin main
+printf "\e[0;36m* deleting remote branch\n\e[0;m"
+git fetch origin --prune
