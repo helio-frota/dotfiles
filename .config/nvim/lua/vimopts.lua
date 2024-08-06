@@ -23,3 +23,5 @@ vim.keymap.set('n', '<C-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
 
 vim.opt.foldmethod = "manual"
+-- Git-blame
+vim.keymap.set("n", "<leader>gb", ":GitBlameToggle<CR>") -- toggle git blame

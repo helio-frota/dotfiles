@@ -1,12 +1,23 @@
+-- File Explorer / Tree
 return {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
+    'nvim-tree/nvim-tree.lua',
     dependencies = {
-        "nvim-lua/plenary.nvim",
-        "nvim-tree/nvim-web-devicons",
-        "MunifTanjim/nui.nvim",
+        'nvim-tree/nvim-web-devicons', -- Fancy icon support
     },
-    config = function()
-        vim.keymap.set('n', '<C-n>', ':Neotree filesystem toggle left<CR>')
+    opts = {
+        actions = {
+            open_file = {
+                window_picker = {
+                    enable = false
+                },
+            }
+        },
+    },
+    config = function(_, opts)
+        -- Recommended settings to disable default netrw file explorer
+        vim.g.loaded_netrw = 1
+        vim.g.loaded_netrwPlugin = 1
+        vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>')
+        require("nvim-tree").setup(opts)
     end
 }
