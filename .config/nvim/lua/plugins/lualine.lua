@@ -7,7 +7,7 @@ return {
     },
     opts = {
         options = {
-            theme = "nord",
+            theme = "vscode",
         },
         sections = {
             lualine_c = {
