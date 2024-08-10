@@ -1,5 +1,5 @@
 import = [
-  "~/.config/nord.toml"
+  "~/.config/vscode-light.toml"
 ]
 
 [env]
