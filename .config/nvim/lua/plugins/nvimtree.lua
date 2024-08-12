@@ -12,6 +12,23 @@ return {
         },
       },
     },
+    renderer = {
+      icons = {
+        show = {
+          git = true,
+        },
+      },
+    },
+    diagnostics = {
+      enable = true,
+      show_on_dirs = false,
+      icons = {
+        hint = "",
+        info = "",
+        warning = "",
+        error = "",
+      },
+    },
   },
   config = function(_, opts)
     require("nvim-tree").setup(opts)
