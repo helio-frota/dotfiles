@@ -20,7 +20,6 @@ o.smartcase = true
 
 -- appearance
 o.cursorline = true
-o.termguicolors = true
 o.background = "light"
 o.colorcolumn = "80"
 o.signcolumn = "yes"

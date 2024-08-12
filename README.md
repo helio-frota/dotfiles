@@ -16,25 +16,26 @@
 │   │   ├── lazy-lock.json
 │   │   ├── lua
 │   │   │   ├── core
-│   │   │   ├── plugins
-│   │   │   │   ├── autopairs.lua
-│   │   │   │   ├── cmp.lua
-│   │   │   │   ├── commentary.lua
-│   │   │   │   ├── crates.lua
-│   │   │   │   ├── dashboard.lua
-│   │   │   │   ├── format.lua
-│   │   │   │   ├── git-blame.lua
-│   │   │   │   ├── lsp-conf.lua
-│   │   │   │   ├── lualine.lua
-│   │   │   │   ├── neotree.lua
-│   │   │   │   ├── none-ls.lua
-│   │   │   │   ├── nvim-tmux-nav.lua
-│   │   │   │   ├── stylua.lua
-│   │   │   │   ├── telescope.lua
-│   │   │   │   ├── treesitter.lua
-│   │   │   │   ├── trouble.lua
-│   │   │   │   └── vscodecolor.lua
-│   │   │   └── vimopts.lua
+│   │   │   │   ├── keymaps.lua
+│   │   │   │   └── options.lua
+│   │   │   └── plugins
+│   │   │       ├── autopairs.lua
+│   │   │       ├── cmp.lua
+│   │   │       ├── commentary.lua
+│   │   │       ├── crates.lua
+│   │   │       ├── dashboard.lua
+│   │   │       ├── format.lua
+│   │   │       ├── git-blame.lua
+│   │   │       ├── lsp-conf.lua
+│   │   │       ├── lualine.lua
+│   │   │       ├── none-ls.lua
+│   │   │       ├── nvim-tmux-nav.lua
+│   │   │       ├── nvimtree.lua
+│   │   │       ├── stylua.lua
+│   │   │       ├── telescope.lua
+│   │   │       ├── treesitter.lua
+│   │   │       ├── trouble.lua
+│   │   │       └── vscodecolor.lua
 │   │   ├── .luarc.json
 │   │   └── .stylua.toml
 │   ├── rofi
@@ -48,4 +49,3 @@
 │   └── display.sh
 └── .tmux.conf
 ```
-
