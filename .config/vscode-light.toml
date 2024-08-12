@@ -1,7 +1,3 @@
-# To add this to your config, e.g. if using Lazy:
-# import = [
-#     "~/Projects/personal/vscode.nvim/extra/alacritty/vscode-light.toml"
-# ]
 [colors.primary]
 background = '#FFFFFF'
 foreground = '#1F1F1F'
