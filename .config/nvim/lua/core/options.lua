@@ -35,3 +35,5 @@ o.clipboard:append "unnamedplus"
 -- https://github.com/christoomey/vim-tmux-navigator?tab=readme-ov-file#netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+vim.lsp.inlay_hint.enable(true)
