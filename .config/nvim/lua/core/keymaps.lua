@@ -21,6 +21,11 @@ k.set("n", "<leader>tp", ":tabp<CR>") -- previous tab
 -- nvim tree toggle
 k.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 
+-- inlay hint toggle
+k.set("n", "<C-i>", function()
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end)
+
 -- open URL under cursor
 k.set("n", "gx", ":!open <c-r><c-a><CR>")
 

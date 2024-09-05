@@ -21,7 +21,7 @@ o.smartcase = true
 -- appearance
 o.cursorline = true
 o.background = "light"
-o.colorcolumn = "80"
+o.colorcolumn = "120"
 o.signcolumn = "yes"
 
 -- other

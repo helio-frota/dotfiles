@@ -33,6 +33,23 @@ return {
   },
   {
     "mrcjkb/rustaceanvim",
+    -- event = { "BufReadPre *.rs", "BufNewFile *.rs" },
     lazy = false,
+    ft = { "rust" },
+    config = function(_, opts)
+      vim.g.rustaceanvim = vim.tbl_deep_extend("force", {}, opts or {})
+    end,
+    opts = {
+      server = {
+        settings = {
+          ["rust-analyzer"] = {
+
+            cargo = { features = "all" },
+            checkOnSave = true,
+            procMacro = { enable = true },
+          },
+        },
+      },
+    },
   },
 }
