@@ -3,7 +3,7 @@ return {
   config = function()
     require("vscode").setup {
       style = "light",
-      transparent = true,
+      transparent = false,
       italic_comments = true,
       underline_links = true,
       disable_nvimtree_bg = true,
