@@ -22,7 +22,7 @@ cpu_usage {
 }
 
 tztime local {
-        format = "%H:%M"
+        format = "%D-%H:%M"
 }
 
 memory {
