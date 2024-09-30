@@ -1,7 +1,6 @@
 local o = vim.opt
 
 -- line numbers
-o.relativenumber = true
 o.nu = true
 
 -- tabs, indent and wrap
