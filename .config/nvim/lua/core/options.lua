@@ -18,6 +18,7 @@ o.ignorecase = true
 o.smartcase = true
 
 -- appearance
+o.termguicolors = true
 o.cursorline = true
 o.background = "light"
 o.colorcolumn = "120"
