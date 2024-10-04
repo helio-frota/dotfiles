@@ -9,7 +9,7 @@ k.set("n", "<C-l>", ":wincmd l<CR>")
 -- git-blame toggle
 k.set("n", "<leader>gb", ":GitBlameToggle<CR>")
 
--- toggle whitespace
+-- toggle white-space
 k.set("n", "<leader>ws", ":ToggleWhitespace<CR>")
 
 -- Tab management

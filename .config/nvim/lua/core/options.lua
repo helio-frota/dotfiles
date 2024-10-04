@@ -30,6 +30,8 @@ o.scrolloff = 8
 o.updatetime = 50
 o.foldmethod = "manual"
 o.clipboard:append "unnamedplus"
+o.spell = true
+o.spelllang = "en_us"
 
 -- https://github.com/christoomey/vim-tmux-navigator?tab=readme-ov-file#netrw
 vim.g.loaded_netrw = 1
