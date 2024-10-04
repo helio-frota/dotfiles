@@ -33,8 +33,4 @@ o.clipboard:append "unnamedplus"
 o.spell = true
 o.spelllang = "en_us"
 
--- https://github.com/christoomey/vim-tmux-navigator?tab=readme-ov-file#netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 vim.lsp.inlay_hint.enable(true)

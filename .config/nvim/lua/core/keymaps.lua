@@ -29,6 +29,9 @@ end)
 -- open URL under cursor
 k.set("n", "gx", ":!open <c-r><c-a><CR>")
 
+-- sort lines
+k.set("v", "<leader>si", ":sort i<CR>")
+
 -- telescope
 k.set("n", "<leader>ff", require("telescope.builtin").find_files, {})
 k.set("n", "<leader>fg", require("telescope.builtin").live_grep, {})
