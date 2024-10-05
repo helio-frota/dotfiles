@@ -33,7 +33,7 @@ return {
   },
   {
     "mrcjkb/rustaceanvim",
-    -- event = { "BufReadPre *.rs", "BufNewFile *.rs" },
+    version = "^5",
     lazy = false,
     ft = { "rust" },
     config = function(_, opts)
