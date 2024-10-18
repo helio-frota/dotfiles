@@ -26,6 +26,9 @@ k.set("n", "<C-i>", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end)
 
+-- markdown preview toggle
+k.set("n", "<leader>mp", ":Markview toggle<CR>")
+
 -- open URL under cursor
 k.set("n", "gx", ":!open <c-r><c-a><CR>")
 
