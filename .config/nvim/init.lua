@@ -12,6 +12,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- TODO: alkjsdlkajsdlkjaldkjaskdj
 -- This has to be set before initializing lazy
 vim.g.mapleader = " "
 
