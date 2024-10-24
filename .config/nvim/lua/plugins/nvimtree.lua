@@ -17,8 +17,19 @@ return {
     },
     renderer = {
       icons = {
+        webdev_colors = true,
         show = {
           git = true,
+          folder_arrow = true,
+        },
+        glyphs = {
+          default = "",
+          folder = {
+            default = "",
+            open = "",
+            empty = "",
+            empty_open = "",
+          },
         },
       },
     },

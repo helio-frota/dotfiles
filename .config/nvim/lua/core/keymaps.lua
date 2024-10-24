@@ -35,6 +35,10 @@ k.set("n", "gx", ":!open <c-r><c-a><CR>")
 -- sort lines
 k.set("v", "<leader>si", ":sort i<CR>")
 
+k.set("n", "<leader>ft", ":FloatermNew --name=foo --height=0.9 --width=0.8 --autoclose=2 fish <CR> ")
+k.set("n", "t", ":FloatermToggle foo<CR>")
+k.set("t", "<Esc>", "<C-\\><C-n>:q<CR>")
+
 -- telescope
 k.set("n", "<leader>ff", require("telescope.builtin").find_files, {})
 k.set("n", "<leader>fg", require("telescope.builtin").live_grep, {})

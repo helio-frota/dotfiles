@@ -20,8 +20,6 @@ o.smartcase = true
 -- appearance
 o.cursorline = true
 o.background = "light"
-o.colorcolumn = "120"
-o.signcolumn = "yes"
 
 -- other
 o.swapfile = false
