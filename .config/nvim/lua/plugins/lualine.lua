@@ -6,9 +6,6 @@ return {
     "linrongbin16/lsp-progress.nvim", -- LSP loading progress
   },
   opts = {
-    options = {
-      theme = "okcolors",
-    },
     sections = {
       lualine_c = {
         {
@@ -29,4 +26,11 @@ return {
       },
     },
   },
+  -- config = function()
+  --   require("lualine").setup {
+  --     options = {
+  --       theme = "gruber-darker",
+  --     },
+  --   }
+  -- end,
 }

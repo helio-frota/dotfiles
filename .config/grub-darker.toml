@@ -1,0 +1,41 @@
+# Gruber Darker Alacritty Colors
+# Default colors
+[colors.primary]
+background = '#181818'
+foreground = '#E4E4E4'
+
+# Cursor colors
+[colors.cursor]
+text = '#181818'
+cursor = '#FFDD33'
+
+# Normal colors
+[colors.normal]
+black = '#181818'
+red = '#F43841'
+green = '#73D936'
+yellow = '#FFDD33'
+blue = '#96A6C8'
+magenta = '#9E95C7'
+cyan = '#95A99F'
+white = '#E4E4E4'
+
+# Bright colors
+[colors.bright]
+black = '#52494E'
+red = '#FF4F58'
+green = '#73D936'
+yellow = '#FFDD33'
+blue = '#52494E'
+magenta = '#9E95C7'
+cyan = '#95A99F'
+white = '#F5F5F5'
+
+# Indexed Colors
+[[colors.indexed_colors]]
+index = 16
+color = '#FFDD33'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#F43841'

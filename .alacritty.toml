@@ -1,5 +1,5 @@
 import = [
-  "~/.config/vscode-light.toml"
+  "~/.config/grub-darker.toml"
 ]
 
 [font]
