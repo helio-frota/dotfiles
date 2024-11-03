@@ -6,8 +6,7 @@ import = [
 size = 13.0
 
 [font.normal]
-family = "JetBrains Mono Nerd Font"
-style = "Regular"
+family = "JetBrainsMono NF"
 
 [selection]
 save_to_clipboard = false
