@@ -25,7 +25,6 @@ require("lazy").setup("plugins", {
   },
 }, lazy_config)
 
-vim.cmd [[colorscheme gruber-darker]]
 -- These modules are not loaded by lazy
 require "core.options"
 require "core.keymaps"
