@@ -26,8 +26,8 @@ k.set("n", "<C-i>", function()
   vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
 end)
 
--- markdown preview toggle
-k.set("n", "<leader>mp", ":Markview toggle<CR>")
+-- show lsp diag error
+k.set("n", "<leader>e", ":lua vim.diagnostic.open_float(0)<CR>")
 
 -- open URL under cursor
 k.set("n", "gx", ":!open <c-r><c-a><CR>")
@@ -35,6 +35,7 @@ k.set("n", "gx", ":!open <c-r><c-a><CR>")
 -- sort lines
 k.set("v", "<leader>si", ":sort i<CR>")
 
+-- float term
 k.set("n", "<leader>ft", ":FloatermNew --name=foo --height=0.9 --width=0.8 --autoclose=2 fish <CR> ")
 k.set("n", "t", ":FloatermToggle foo<CR>")
 k.set("t", "<Esc>", "<C-\\><C-n>:q<CR>")

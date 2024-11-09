@@ -15,13 +15,15 @@ vim.opt.rtp:prepend(lazypath)
 -- This has to be set before initializing lazy
 vim.g.mapleader = " "
 
+local lazy_config = require "core.lazy"
+
 -- Initialize lazy with dynamic loading of anything in the plugins directory
 require("lazy").setup("plugins", {
   change_detection = {
     enabled = true, -- auto check for config file changes and reload the UI
     notify = false, -- turn off notifications whenever plugin changes are made
   },
-})
+}, lazy_config)
 
 vim.cmd [[colorscheme gruber-darker]]
 -- These modules are not loaded by lazy
