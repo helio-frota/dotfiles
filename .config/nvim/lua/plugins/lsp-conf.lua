@@ -98,7 +98,7 @@ return {
             checkOnSave = true,
             procMacro = { enable = true },
             check = {
-              command = "clippy",
+              command = "check",
               extraArgs = {
                 "--",
                 "-D",

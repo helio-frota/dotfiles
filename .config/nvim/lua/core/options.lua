@@ -19,7 +19,7 @@ o.smartcase = true
 
 -- appearance
 o.cursorline = true
-o.background = "dark"
+o.background = "light"
 o.termguicolors = true
 
 -- other
