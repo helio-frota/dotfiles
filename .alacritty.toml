@@ -1,12 +1,12 @@
-import = [
-  "~/.config/grub-darker.toml"
+general.import = [
+  "~/.config/tp.toml"
 ]
 
 [font]
-size = 13.0
+size = 14.0
 
 [font.normal]
-family = "JetBrainsMono NF"
+family = "JetBrainsMonoNL NF"
 
 [selection]
 save_to_clipboard = false

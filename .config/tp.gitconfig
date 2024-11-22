@@ -1,0 +1,16 @@
+[delta]
+# color for removed lines
+minus-style                   = syntax "#F2F2F2"
+minus-non-emph-style          = syntax "#F2F2F2"
+minus-emph-style              = syntax "#F05050"
+minus-empty-line-marker-style = syntax "#F2F2F2"
+line-numbers-minus-style      = "#AA3721"
+# color for added lines
+plus-style                    = syntax "#F2F2F2"
+plus-non-emph-style           = syntax "#F2F2F2"
+plus-emph-style               = syntax "#60CB00"
+plus-empty-line-marker-style  = syntax "#F2F2F2"
+line-numbers-plus-style       = "#448C27"
+# color for unchanged lines
+line-numbers-zero-style       = "#777777"
+

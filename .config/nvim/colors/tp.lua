@@ -22,7 +22,7 @@ local Color4 = "#1100FF"
 local Color5 = "#91A0B9"
 local Color6 = "#3D5072"
 local Color7 = "#ffffff"
-local Color8 = "#000"
+local Color8 = "#4D4D4D"
 local Color9 = "#FFFAEE"
 
 highlight("Character", nil, Color2, nil)
@@ -40,12 +40,15 @@ highlight("LineNr", nil, Color10, nil)
 highlight("Number", nil, Color2, nil)
 highlight("Normal", Color7, Color8, nil)
 highlight("StatusLine", Color5, Color8, nil)
+
 highlight("TelescopeNormal", Color12, nil, nil)
 highlight("TelescopeMatching", Color16, nil, nil)
 highlight("TelescopeTitle", nil, Color8, nil)
+
 highlight("NvimTreeNormal", nil, Color8, nil)
-highlight("NvimTreeFolderName", nil, Color14, nil)
-highlight("NvimTreeOpenedFolderName", nil, Color4, nil)
+highlight("NvimTreeFolderName", nil, Color8, nil)
+highlight("NvimTreeFolderIcon", nil, Color16, nil)
+highlight("NvimTreeOpenedFolderName", nil, Color8, nil)
 highlight("NvimTreeFileName", nil, Color8, nil)
 
 --TODO: fix nvimtree, telescope and noice

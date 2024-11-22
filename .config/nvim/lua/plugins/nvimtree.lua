@@ -20,13 +20,13 @@ return {
         webdev_colors = true,
         show = {
           git = true,
-          folder_arrow = true,
+          folder_arrow = false,
         },
         glyphs = {
           default = "",
           folder = {
-            default = "",
-            open = "",
+            default = "",
+            open = "",
             empty = "",
             empty_open = "",
           },

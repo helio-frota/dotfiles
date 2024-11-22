@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- This has to be set before initializing lazy
 vim.g.mapleader = " "
+vim.g.neovide_cursor_animation_length = 0
 vim.cmd [[colorscheme tp]]
 
 local lazy_config = require "core.lazy"
