@@ -55,7 +55,7 @@ return {
     lazy = false,
     ft = { "rust" },
     config = function(_, opts)
-      vim.g.rustaceanvim = vim.tbl_deep_extend("force", {}, opts or {})
+      --   vim.g.rustaceanvim = vim.tbl_deep_extend("force", {}, opts or {})
       -- dbg config
       -- local mason_registry = require "mason-registry"
       -- local codelldb = mason_registry.get_package "codelldb"

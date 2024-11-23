@@ -41,6 +41,7 @@ k.set("n", "t", ":FloatermToggle foo<CR>")
 k.set("t", "<Esc>", "<C-\\><C-n>:q<CR>")
 
 -- telescope
+k.set("n", "<leader>fd", "<cmd>Telescope diagnostics<CR>", { desc = "Telescope diagnostics" })
 k.set("n", "<leader>ff", require("telescope.builtin").find_files, {})
 k.set("n", "<leader>fg", require("telescope.builtin").live_grep, {})
 k.set("n", "<leader>fb", require("telescope.builtin").buffers, {})
@@ -56,6 +57,11 @@ k.set("n", "<C-s>", ":write<CR>", { silent = true, desc = "Save" })
 k.set("v", "<C-c>", '"+y', { silent = true, desc = "Copy to clipboard" })
 k.set("n", "<C-v>", '"+p', { silent = true, desc = "Paste from clipboard" })
 k.set("i", "<C-v>", "<C-r>+", { silent = true, desc = "Paste from clipboard" })
+k.set("v", "<C-x>", '"+d', { silent = true, desc = "Cut to clipboard" })
+k.set("n", "<C-z>", "u", { silent = true, desc = "Undo" })
+k.set("i", "<C-z>", "<C-o>u", { silent = true, desc = "Undo" })
+k.set("n", "<C-y>", "<C-r>", { silent = true, desc = "Redo" })
+k.set("i", "<C-y>", "<C-o><C-r>", { silent = true, desc = "Redo" })
 
 -- Nvim DAP
 -- k.set("n", "<Leader>dl", "<cmd>lua require'dap'.step_into()<CR>", { desc = "Debugger step into" })
