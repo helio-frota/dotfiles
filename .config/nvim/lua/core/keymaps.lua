@@ -52,17 +52,22 @@ k.set("n", "<leader>fm", function()
   require("telescope.builtin").treesitter { default_text = ":method:" }
 end)
 
+k.set("n", "<C-s>", ":write<CR>", { silent = true, desc = "Save" })
+k.set("v", "<C-c>", '"+y', { silent = true, desc = "Copy to clipboard" })
+k.set("n", "<C-v>", '"+p', { silent = true, desc = "Paste from clipboard" })
+k.set("i", "<C-v>", "<C-r>+", { silent = true, desc = "Paste from clipboard" })
+
 -- Nvim DAP
-k.set("n", "<Leader>dl", "<cmd>lua require'dap'.step_into()<CR>", { desc = "Debugger step into" })
-k.set("n", "<Leader>dj", "<cmd>lua require'dap'.step_over()<CR>", { desc = "Debugger step over" })
-k.set("n", "<Leader>dk", "<cmd>lua require'dap'.step_out()<CR>", { desc = "Debugger step out" })
-k.set("n", "<Leader>dc", "<cmd>lua require'dap'.continue()<CR>", { desc = "Debugger continue" })
-k.set("n", "<Leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { desc = "Debugger toggle breakpoint" })
-k.set(
-  "n",
-  "<Leader>dd",
-  "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
-  { desc = "Debugger set conditional breakpoint" }
-)
-k.set("n", "<Leader>de", "<cmd>lua require'dap'.terminate()<CR>", { desc = "Debugger reset" })
-k.set("n", "<Leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Debugger run last" })
+-- k.set("n", "<Leader>dl", "<cmd>lua require'dap'.step_into()<CR>", { desc = "Debugger step into" })
+-- k.set("n", "<Leader>dj", "<cmd>lua require'dap'.step_over()<CR>", { desc = "Debugger step over" })
+-- k.set("n", "<Leader>dk", "<cmd>lua require'dap'.step_out()<CR>", { desc = "Debugger step out" })
+-- k.set("n", "<Leader>dc", "<cmd>lua require'dap'.continue()<CR>", { desc = "Debugger continue" })
+-- k.set("n", "<Leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { desc = "Debugger toggle breakpoint" })
+-- k.set(
+--   "n",
+--   "<Leader>dd",
+--   "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>",
+--   { desc = "Debugger set conditional breakpoint" }
+-- )
+-- k.set("n", "<Leader>de", "<cmd>lua require'dap'.terminate()<CR>", { desc = "Debugger reset" })
+-- k.set("n", "<Leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Debugger run last" })
