@@ -5,7 +5,7 @@ return {
     require("lualine").setup {
       options = {
         icons_enabled = true,
-        theme = "onelight",
+        theme = "16color",
       },
     }
   end,

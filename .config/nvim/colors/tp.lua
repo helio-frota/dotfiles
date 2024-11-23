@@ -18,11 +18,11 @@ local keywords1 = "#0000ff"
 local keywords2 = "#000080"
 local line_number = "#c0c0c0"
 local text = "#000000"
-local folder = "#ffd86c"
-local match_search = "#ffd86c"
-local warning = "#ffd86c"
+local match_search = "#daa520"
+local warning = "#daa520"
 local border = "#465a7d"
 local folder_name = "#465a7d"
+local folder = "#465a7d"
 local title = "#99b4d1"
 local string_escape = "#465a7d"
 local background = "#fefefe"
@@ -38,6 +38,7 @@ highlight("FunctionBuiltin", nil, keywords2, nil)
 highlight("FunctionMacro", nil, keywords2, nil)
 highlight("PunctBracket", nil, brackets, nil)
 highlight("Keyword", nil, keywords1, nil)
+highlight("Keyword2", nil, keywords2, nil)
 highlight("LineNr", nil, line_number, nil)
 highlight("Number", nil, numbers, nil)
 highlight("Normal", background, text, nil)
@@ -89,3 +90,7 @@ vim.api.nvim_set_hl(0, "@punctuation.bracket", { link = "PunctBracket" })
 vim.api.nvim_set_hl(0, "@string", { link = "String" })
 vim.api.nvim_set_hl(0, "@string.escape", { link = "StringEscape" })
 vim.api.nvim_set_hl(0, "@keyword", { link = "Keyword" })
+vim.api.nvim_set_hl(0, "@type", { link = "Keyword2" })
+vim.api.nvim_set_hl(0, "@type.builtin", { link = "Keyword2" })
+vim.api.nvim_set_hl(0, "@attribute", { link = "Keyword" })
+vim.api.nvim_set_hl(0, "@variable.builtin", { link = "Keyword" })
