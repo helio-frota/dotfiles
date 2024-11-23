@@ -7,51 +7,76 @@ local highlight = function(group, bg, fg, attr)
   vim.api.nvim_command("highlight " .. group .. " " .. fg .. " " .. bg .. " " .. attr)
 end
 
-local Color0 = "#008000"
-local Color1 = "#008080"
-local Color10 = "#b6b2b2"
-local Color11 = "#b6b4b4"
-local Color12 = "#000"
-local Color13 = "#FF0000"
-local Color14 = "#0000AA"
-local Color15 = "#777777"
-local Color16 = "#FFBC5D"
-local Color2 = "#AD4011"
-local Color3 = "#000000"
-local Color4 = "#1100FF"
-local Color5 = "#91A0B9"
-local Color6 = "#3D5072"
-local Color7 = "#ffffff"
-local Color8 = "#4D4D4D"
-local Color9 = "#FFFAEE"
+local comments = "#008000"
+local selected_text = "#0078d7"
+local chars_and_strings = "#008080"
+local numbers = "#AD4011"
+local brackets = "#ff0000"
+local error = "#ff0000"
+local cursor_line = "#fffbf0"
+local keywords1 = "#0000ff"
+local keywords2 = "#000080"
+local line_number = "#c0c0c0"
+local text = "#000000"
+local folder = "#ffd86c"
+local match_search = "#ffd86c"
+local warning = "#ffd86c"
+local border = "#465a7d"
+local folder_name = "#465a7d"
+local title = "#99b4d1"
+local string_escape = "#465a7d"
+local background = "#fefefe"
 
-highlight("Character", nil, Color2, nil)
-highlight("IncSearch", Color16, nil, nil)
-highlight("Comment", nil, Color0, "italic")
-highlight("CursorLine", Color9, nil, nil)
-highlight("String", nil, Color1, nil)
-highlight("StringEscape", nil, Color15, nil)
-highlight("Function", nil, Color14, nil)
-highlight("FunctionBuiltin", nil, Color14, nil)
-highlight("FunctionMacro", nil, Color14, nil)
-highlight("PunctBracket", nil, Color13, nil)
-highlight("Keyword", nil, Color4, nil)
-highlight("LineNr", nil, Color10, nil)
-highlight("Number", nil, Color2, nil)
-highlight("Normal", Color7, Color8, nil)
-highlight("StatusLine", Color5, Color8, nil)
+highlight("Character", nil, chars_and_strings, nil)
+highlight("IncSearch", match_search, nil, nil)
+highlight("Comment", nil, comments, "italic")
+highlight("CursorLine", cursor_line, nil, nil)
+highlight("String", nil, chars_and_strings, nil)
+highlight("StringEscape", nil, string_escape, nil)
+highlight("Function", nil, keywords2, nil)
+highlight("FunctionBuiltin", nil, keywords2, nil)
+highlight("FunctionMacro", nil, keywords2, nil)
+highlight("PunctBracket", nil, brackets, nil)
+highlight("Keyword", nil, keywords1, nil)
+highlight("LineNr", nil, line_number, nil)
+highlight("Number", nil, numbers, nil)
+highlight("Normal", background, text, nil)
+highlight("Visual", selected_text, background, nil)
 
-highlight("TelescopeNormal", Color12, nil, nil)
-highlight("TelescopeMatching", Color16, nil, nil)
-highlight("TelescopeTitle", nil, Color8, nil)
+-- telescope
+highlight("TelescopeNormal", background, nil, nil)
+highlight("TelescopeMatching", match_search, nil, nil)
+highlight("TelescopePreviewLine", match_search, nil, nil)
+highlight("TelescopeTitle", nil, title, nil)
+highlight("TelescopeSelection", selected_text, background, nil)
+highlight("TelescopeBorder", nil, border, nil)
 
-highlight("NvimTreeNormal", nil, Color8, nil)
-highlight("NvimTreeFolderName", nil, Color8, nil)
-highlight("NvimTreeFolderIcon", nil, Color16, nil)
-highlight("NvimTreeOpenedFolderName", nil, Color8, nil)
-highlight("NvimTreeFileName", nil, Color8, nil)
+-- barbar
+highlight("BufferCurrent", background, nil, nil)
+highlight("BufferCurrentMod", background, nil, nil)
+highlight("BufferCurrentIndex", background, nil, nil)
+highlight("BufferCurrentSign", background, nil, nil)
+highlight("BufferInactive", background, nil, nil)
+highlight("BufferInactiveMod", background, nil, nil)
+highlight("BufferInactiveIndex", background, nil, nil)
+highlight("BufferInactiveSign", background, nil, nil)
+highlight("BufferVisible", background, nil, nil)
+highlight("BufferVisibleMod", background, nil, nil)
+highlight("BufferVisibleIndex", background, nil, nil)
+highlight("BufferVisibleSign", background, nil, nil)
+highlight("BufferAlternate", background, nil, nil)
+highlight("BufferError", error, nil, nil)
+highlight("BufferWarning", warning, nil, nil)
+highlight("BufferTabpageFill", background, nil, nil)
+highlight("BufferTabpages", background, nil, nil)
 
---TODO: fix nvimtree, telescope and noice
+-- nvimtree
+highlight("NvimTreeNormal", nil, text, nil)
+highlight("NvimTreeFolderName", nil, folder_name, nil)
+highlight("NvimTreeFolderIcon", nil, folder, nil)
+highlight("NvimTreeOpenedFolderName", nil, folder_name, nil)
+highlight("NvimTreeFileName", nil, text, nil)
+highlight("NvimTreeWinSeparator", nil, border, nil)
 
 vim.api.nvim_set_hl(0, "@character", { link = "Character" })
 vim.api.nvim_set_hl(0, "@number", { link = "Number" })
