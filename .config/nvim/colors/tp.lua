@@ -113,6 +113,16 @@ vim.api.nvim_set_hl(0, "@variable.builtin", { link = "Keyword" })
 -- noice
 vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { fg = "#465a7d", bg = "NONE" })
 
--- NoiceLspProgressClient: Nome do cliente LSP durante progresso.
--- NoiceLspProgressSpinner: Spinner de progresso do LSP.
--- NoiceLspProgressTitle: Título do progresso do LSP.
+-- diagnostics
+vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#ff0000" })
+vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = "#daa520" })
+vim.api.nvim_set_hl(0, "DiagnosticInfo", { fg = "#008000" })
+vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#008000" })
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextError", { fg = "#ff0000" })
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn", { fg = "#daa520" })
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextInfo", { fg = "#008000" })
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextHint", { fg = "#008000" })
+vim.api.nvim_set_hl(0, "DDiagnosticUnderlineError", { fg = "#ff0000" })
+vim.api.nvim_set_hl(0, "DDiagnosticUnderlineWarn", { fg = "#daa520" })
+vim.api.nvim_set_hl(0, "DDiagnosticUnderlineInfo", { fg = "#008000" })
+vim.api.nvim_set_hl(0, "DDiagnosticUnderlineHint", { fg = "#008000" })
