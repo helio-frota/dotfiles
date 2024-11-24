@@ -45,3 +45,9 @@ k.set("n", "<leader>fh", t.help_tags, { desc = "Help tags" })
 k.set("n", "<leader>fu", t.current_buffer_fuzzy_find, { desc = "Find in current buffer" })
 k.set("n", "<leader>fo", t.lsp_document_symbols, { desc = "LSP symbols" })
 k.set("n", "<leader>fi", t.lsp_incoming_calls, { desc = "LSP incoming calls" })
+
+-- LSP related stuff
+k.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+k.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Refactor rename" })
+k.set({ "n", "v" }, "<leader>ct", vim.lsp.buf.code_action, { desc = "Available code actions" })
+k.set("n", "gr", vim.lsp.buf.references, { desc = "Find all references" })
