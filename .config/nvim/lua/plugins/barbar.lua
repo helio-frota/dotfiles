@@ -12,5 +12,9 @@ return {
     sidebar_filetypes = {
       NvimTree = true,
     },
+    icons = {
+      separator = { left = "|", right = "|" },
+      separator_at_end = false,
+    },
   },
 }

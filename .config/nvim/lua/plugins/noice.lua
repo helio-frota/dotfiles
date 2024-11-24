@@ -6,8 +6,11 @@ return {
     "MunifTanjim/nui.nvim",
     "rcarriga/nvim-notify",
   },
-  -- config = function()
-  -- require("noice").setup {
-  -- }
-  -- end,
+  config = function()
+    require("noice").setup {
+      presets = {
+        lsp_doc_border = true,
+      },
+    }
+  end,
 }

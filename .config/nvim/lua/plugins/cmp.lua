@@ -45,9 +45,12 @@ return {
         { name = "path" }, -- file system paths
       },
       window = {
-        -- Add borders to completions popups
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered {
+          winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder",
+        },
+        completion = cmp.config.window.bordered {
+          winhighlight = "Normal:CmpPmenu,FloatBorder:CmpBorder",
+        },
       },
     }
   end,

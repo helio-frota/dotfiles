@@ -45,6 +45,8 @@ hl("Number", nil, numbers, nil)
 hl("Normal", background, text, nil)
 hl("Visual", selected_text, background, nil)
 
+vim.api.nvim_set_hl(0, "NormalFloat", { link = "Normal" })
+
 -- telescope
 hl("TelescopeNormal", background, nil, nil)
 hl("TelescopeMatching", match_search, nil, nil)
@@ -61,7 +63,7 @@ hl("BufferCurrentSign", background, nil, nil)
 hl("BufferInactive", background, nil, nil)
 hl("BufferInactiveMod", background, nil, nil)
 hl("BufferInactiveIndex", background, nil, nil)
-hl("BufferInactiveSign", background, nil, nil)
+hl("BufferInactiveSign", background, background, nil)
 hl("BufferVisible", background, nil, nil)
 hl("BufferVisibleMod", background, nil, nil)
 hl("BufferVisibleIndex", background, nil, nil)
