@@ -86,7 +86,7 @@ return {
           vim.keymap.set("n", "<space>wr", vim.lsp.buf.remove_workspace_folder)
           vim.keymap.set("n", "<space>D", vim.lsp.buf.type_definition)
           vim.keymap.set("n", "<space>rn", vim.lsp.buf.rename)
-          vim.keymap.set({ "n", "v" }, "<space>ct", vim.lsp.buf.code_action)
+          vim.keymap.set({ "n", "v" }, "<space>cd", vim.lsp.buf.code_action)
           vim.keymap.set("n", "gr", vim.lsp.buf.references)
           vim.keymap.set("n", "<space>f", function()
             vim.lsp.buf.format { async = true }
