@@ -15,8 +15,15 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    dependencies = {
+      "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    },
     lazy = false,
     config = function(_, opts)
+      require("lsp_lines").setup()
+      vim.diagnostic.config {
+        virtual_text = false,
+      }
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require "lspconfig"
       lspconfig.lua_ls.setup {
