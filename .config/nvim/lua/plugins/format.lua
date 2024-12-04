@@ -4,7 +4,7 @@ return {
     require("conform").setup {
       formatters_by_ft = {
         lua = { "stylua" },
-        toml = { "taplo" },
+        -- toml = { "taplo" },
         rust = { "rustfmt", lsp_format = "fallback" },
       },
       format_on_save = {

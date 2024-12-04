@@ -128,3 +128,5 @@ vim.api.nvim_set_hl(0, "DDiagnosticUnderlineError", { fg = "#ff0000" })
 vim.api.nvim_set_hl(0, "DDiagnosticUnderlineWarn", { fg = "#daa520" })
 vim.api.nvim_set_hl(0, "DDiagnosticUnderlineInfo", { fg = "#008000" })
 vim.api.nvim_set_hl(0, "DDiagnosticUnderlineHint", { fg = "#008000" })
+
+-- vim.api.nvim_set_hl(0, "IlluminatedWordRead", { fg = "#ffffff", bg = "#0078d7" })
