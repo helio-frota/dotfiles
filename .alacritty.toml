@@ -1,19 +1,27 @@
 general.import = [
-  "~/.config/nvim-dark.toml"
+  "~/.config/nvim-light.toml"
 ]
 
 [font]
-size = 14.0
+size = 14.5
 
-[font.offset]
-x = 0
-y = -1
+# [font.offset]
+# x = 0
+# y = 0
 
 [font.normal]
 family = "InputMonoCompressed"
 
+[font.bold]
+family = "InputMonoCompressed"
+style = "Medium"
+
 [selection]
 save_to_clipboard = false
 
-[window]
-dynamic_padding = true
+# [window]
+# dynamic_padding = true
+
+# [window.padding]
+# x = 0
+# y = 19
